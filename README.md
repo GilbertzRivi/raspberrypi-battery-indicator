@@ -4,8 +4,11 @@ battery indicator using esp32 microcontroller and python code
 # requirements installation
 WORKS ONLY WITH X11 BACKEND!
 ```sudo apt install python3-full python3-venv``` 
+
 ```python3 -m venv battery_venv```
+
 ```source battery_venv/bin/activate```
+
 ```pip install -r path/to/requirements.txt```
 
 # My configuration:
