@@ -7,6 +7,8 @@ from PIL import Image, ImageDraw, ImageFont
 # set this location to the location of the font of your choice
 font_location = "/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf"
 
+image = Image.open('path-to-placeholder-icon.png')
+
 # Serial port setup
 ser = serial.Serial(
         port='/dev/ttyACM0', # set it up to the location of your serial port
@@ -36,7 +38,7 @@ def update_icon():
         time.sleep(1)
 
 if __name__ == '__main__':
-    icon = pystray.Icon("battery")
+    icon = pystray.Icon("battery", image)
     thread = threading.Thread(target=update_icon)
     thread.start()
     icon.run()
