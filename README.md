@@ -30,9 +30,7 @@ IMPORTANT
 
 Be aware that there are many versions of microcontrollers, some of them have ADC that accept up to 3.3V and some of them accept only up to 1V. Create your voltage divider according to that not to damage your microcontroller!
 
-# you should create a voltage divider that creates voltage safe for your microcontroller when the battery is full!
-
-# reading is inconsistent
+# what to do when the reading is inconsistent
 Add 10uF cappacitor between VCC and GND on your battery and 1uF cappacitor bettwen analog pin and gnd on your microcontroller and connect gnd of your microcontroller directly to gnd on your battery
 
 # Launch 
