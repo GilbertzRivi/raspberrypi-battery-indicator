@@ -36,7 +36,7 @@ Add 10uF cappacitor between VCC and GND on your battery and 1uF cappacitor bettw
 # Launch 
 edit esp_voltage_reading.ino and add values that work for your configuration and flash the microcontroller, add batteryindicator.py to autostart on rpi, connect your microcontroller to USB/Serial port of rpi.
 
-#How to know what I should put in the "x" variable in esp_voltage_reading.ino?
+# How to know what I should put in the "x" variable in esp_voltage_reading.ino?
 flash this code:
 ```
 int analogPin = A0; //change this to your pin
