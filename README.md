@@ -14,3 +14,7 @@ Im using 4s 14,8V battery, the resistor configuration will be different accordin
 Add 10uF cappacitor between VCC and GND on your battery and 1uF cappacitor bettwen analog pin and gnd on your microcontroller and connect gnd of your microcontroller directly to gnd on your battery
 
 if you have any questions you can dm me on telegram: @GilbertzRivi
+
+# Launch 
+add batteryindicator.py to autostart, connect your microcontroller to USB/Serial port of rpi.
+WORKS ONLY WITH X11 BACKEND!
