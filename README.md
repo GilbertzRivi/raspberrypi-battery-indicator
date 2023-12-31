@@ -19,3 +19,8 @@ WORKS ONLY WITH X11 BACKEND!
 
 
 if you have any questions you can dm me on telegram: @GilbertzRivi
+
+# My configuration to add this to autostart
+Create a ```/home/pi/.config/autostart/battery.desktop``` file, as Exec= argument pass ```/home/pi/battery.sh``` file, and into this shell file put ```/bin/bash -c "/usr/bin/python3 /home/pi/batteryindicator.py"```. Other configurations wouldn't work for me and I spend 2 hours on this, so here you are don't waste your time. 😄
+
+Tutorial on creating .desktop files https://dev.to/ha7shu/how-to-create-a-desktop-entry-in-linux-23p9
