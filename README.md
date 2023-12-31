@@ -10,7 +10,7 @@ this gives about 2.8V on the analog pin while the battery is full
 Im using 4s 14,8V battery, the resistor configuration will be different according to your battery
 # you should create a voltage divider that creates voltage safe for your microcontroller when the battery is full!
 
-# reading is incosistant
+# reading is inconsistent
 Add 10uF cappacitor between VCC and GND on your battery and 1uF cappacitor bettwen analog pin and gnd on your microcontroller and connect gnd of your microcontroller directly to gnd on your battery
 
 # Launch 
