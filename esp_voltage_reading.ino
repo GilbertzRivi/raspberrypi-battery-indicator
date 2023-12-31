@@ -13,7 +13,7 @@ void setup() {
 
 void loop() {
   sensorValue = analogRead(analogInPin);
-  v = sensorValue * x / 100; // v represents now voltage of your battery pack
+  v = sensorValue * x; // v represents now voltage of your battery pack
   percent = ((v / number_of_cells) - min_voltage) / (max_voltage - min_voltage);
   Serial.println(percent);
   // this delay has to be the same as in your python script, note that delay here is in ms but in python it is in s, so if here is 30000 in python it should be 30
