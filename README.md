@@ -36,6 +36,27 @@ Add 10uF cappacitor between VCC and GND on your battery and 1uF cappacitor bettw
 # Launch 
 edit esp_voltage_reading.ino and add values that work for your configuration and flash the microcontroller, add batteryindicator.py to autostart on rpi, connect your microcontroller to USB/Serial port of rpi.
 
+#How to know what I should put in the "x" variable in esp_voltage_reading.ino?
+flash this code:
+```
+int analogPin = A0; //change this to your pin
+unsigned int sum = 0;
+float avarage;
+void setup(){
+  Serial.begin(9600);
+  pinMode(analogpin, INPUT);
+  for (int i=0; i<10; i++){
+    sum += analogRead(analogPin);
+    delay(1000);
+  }
+  avarage = sum/10;
+  Serial.println(avarage);
+}
+void loop(){
+}
+```
+then divide the battery voltage in V by the avarage, for example: 16.28 / 3929, the result (in this example 0.0041435479765844) is the value you should put as x variable in esp_voltage_reading.ino
+
 # My configuration to add this to autostart
 Here is a tutorial on creating .desktop files https://dev.to/ha7shu/how-to-create-a-desktop-entry-in-linux-23p9
 
