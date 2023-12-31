@@ -31,7 +31,7 @@ IMPORTANT
 Be aware that there are many versions of microcontrollers, some of them have ADC that accept up to 3.3V and some of them accept only up to 1V. Create your voltage divider according to that not to damage your microcontroller!
 
 # what to do when the reading is inconsistent
-Add 10uF cappacitor between VCC and GND on your battery and 1uF cappacitor bettwen analog pin and gnd on your microcontroller and connect gnd of your microcontroller directly to gnd on your battery
+Add 10uF cappacitor between VCC and GND on your battery and 1uF cappacitor bettwen analog pin and gnd on your microcontroller and connect gnd of your microcontroller directly to gnd on your battery. You can also use bigger cappacitors, its up to you.
 
 # Launch 
 edit esp_voltage_reading.ino and add values that work for your configuration and flash the microcontroller, add batteryindicator.py to autostart on rpi, connect your microcontroller to USB/Serial port of rpi.
