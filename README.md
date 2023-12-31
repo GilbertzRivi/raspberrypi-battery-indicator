@@ -12,6 +12,8 @@ WORKS ONLY WITH X11 BACKEND!
 
 ```pip install -r path/to/requirements.txt```
 
+to exit venv: ```deactivate```
+
 # My configuration:
 Im using xiao ESP32C3. 
 ESP's Analog pin is connected to a voltage divider:
