@@ -34,8 +34,8 @@ def update_icon():
             draw.text((0,8), x, (0,0,0), font=font)
             # update the icon
             icon.icon = img
-        # this has to be the same delay as used in your microconttoller 
-        time.sleep(1)
+        # this has to be the same delay as in your microcontroller 
+        time.sleep(30)
 
 if __name__ == '__main__':
     icon = pystray.Icon("battery", image)
