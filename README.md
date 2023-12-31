@@ -1,6 +1,13 @@
 # raspberrypi-battery-indicator
 battery indicator using esp32 microcontroller and python code
 
+# requirements installation
+WORKS ONLY WITH X11 BACKEND!
+```sudo apt install python3-full python3-venv``` 
+```python3 -m venv battery_venv```
+```source battery_venv/bin/activate```
+```pip install -r path/to/requirements.txt```
+
 # My configuration:
 Im using xiao ESP32C3. 
 ESP's Analog pin is connected to a voltage divider:
@@ -17,12 +24,14 @@ Add 10uF cappacitor between VCC and GND on your battery and 1uF cappacitor bettw
 
 # Launch 
 edit esp_voltage_reading.ino and add values that work for your configuration and flash the microcontroller, add batteryindicator.py to autostart on rpi, connect your microcontroller to USB/Serial port of rpi.
-WORKS ONLY WITH X11 BACKEND!
-
-
-if you have any questions you can dm me on telegram: @GilbertzRivi
 
 # My configuration to add this to autostart
-Create a ```/home/pi/.config/autostart/battery.desktop``` file, as Exec= argument pass ```/home/pi/battery.sh``` file, and into this shell file put ```/bin/bash -c "/usr/bin/python3 /home/pi/batteryindicator.py"```. Other configurations wouldn't work for me and I spend 2 hours on this, so here you are don't waste your time. 😄
+Here is a tutorial on creating .desktop files https://dev.to/ha7shu/how-to-create-a-desktop-entry-in-linux-23p9
 
-Tutorial on creating .desktop files https://dev.to/ha7shu/how-to-create-a-desktop-entry-in-linux-23p9
+Create a ```/home/pi/.config/autostart/battery.desktop``` file, as Exec= argument pass ```/home/pi/battery.sh``` file, and into this shell file put ```/bin/bash -c "source /home/pi/battery_venv/bin/activate && python3 /home/pi/batteryindicator.py"```. Other configurations wouldn't work for me and I spend 2 hours on this, so here you are don't waste your time. 😄
+
+Anyway if you want to do it yourself, here is a detailed tutorial: https://github.com/thagrol/Guides/tree/main=
+
+----------------------------------
+
+if you have any questions you can dm me on telegram: @GilbertzRivi
