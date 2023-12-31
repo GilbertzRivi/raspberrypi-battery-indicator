@@ -18,11 +18,18 @@ to exit venv: ```deactivate```
 Im using xiao ESP32C3. 
 ESP's Analog pin is connected to a voltage divider:
 
-VCC - 10k ohm resistor - Analog pin - 2k ohm resistor - GND
+```VCC - 10k ohm resistor - Analog pin - 2k ohm resistor - GND```
 
 this gives about 2.8V on the analog pin while the battery is full
 
 Im using 4s 14,8V battery, the resistor configuration will be different according to your battery
+
+Here is a online tool to create a voltage divider: https://ohmslawcalculator.com/voltage-divider-calculator Input your source voltage (full battery voltage), and desired resistor values to check the output voltage
+
+IMPORTANT 
+
+Be aware that there are many versions of microcontrollers, some of them have ADC that accept up to 3.3V and some of them accept only up to 1V. Create your voltage divider according to that not to damage your microcontroller!
+
 # you should create a voltage divider that creates voltage safe for your microcontroller when the battery is full!
 
 # reading is inconsistent
