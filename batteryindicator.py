@@ -7,7 +7,8 @@ from PIL import Image, ImageDraw, ImageFont
 # set this location to the location of the font of your choice
 font_location = "/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf"
 
-image = Image.open('path-to-placeholder-icon.png')
+#this image will be used after the script start, while it waits for first reading from microcontroller
+image = Image.new("RGB", (32,32), (255, 255, 255))
 
 # Serial port setup
 ser = serial.Serial(
